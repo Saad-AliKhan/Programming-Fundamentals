@@ -1,0 +1,6 @@
+def convert(x):
+    Grams = x * 453.59237
+    Kg = x * 0.454
+    return Grams, Kg
+x = int(input("Enter Pounds: "))
+print(convert(x))
