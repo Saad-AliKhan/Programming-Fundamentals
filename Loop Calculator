@@ -1,0 +1,31 @@
+def Addition(x, y):
+    return x + y
+
+def Subtraction(x, y):
+    return x - y
+
+def Division(x, y):
+    return x / y
+
+def Multiplication(x ,y):
+    return x * y
+
+
+
+while True:
+    x = int(input("Enter value 1: "))
+    y = int(input("Enter value 2: "))
+    Op = input("Enter operation: ")
+    if Op == "+":
+        print(Addition(x ,y))
+    elif Op == "-":
+        print(Subtraction(x ,y))
+    elif Op == "/":
+        print(Division(x ,y))
+    elif Op == "*":
+        print(Multiplication(x ,y))
+    else:
+        print("Error")
+        
+    if input("Do you wish to continue? Y/N: ") == "N":
+            break
