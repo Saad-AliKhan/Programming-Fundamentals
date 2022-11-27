@@ -1,0 +1,28 @@
+print("Choose an itemen 1-4 from the menu")
+print("                                     Small   Regular")
+print("1.Iced Choclate                      350         400")
+print("2.White Iced Choclate                400         450")
+print("3.Iced Lime                          330         370")
+print("4.Chiller Chai                       300         420")
+items_S = {"Iced Choclate":350 ,"White Iced Choclate":400 , "Iced Lime":330 ,"Chiller Chai":300 }
+items_R = {"Iced Choclate":400 ,"White Iced Choclate":450 , "Iced Lime":370 ,"Chiller Chai":420 }
+
+bill = 0
+while True:
+    choice_Name = input("Enter Item: ")
+    choice_Size = input("Enter Size R/S: ")
+    choice_quant = int(input("Enter Amount: "))
+    if choice_Size == "S":
+        bill = bill + (items_S[choice_Name]*choice_quant)
+
+    else:
+        bill = bill + (items_R[choice_Name]*choice_quant)
+
+    if input("Do you wish to continue? Y/N: ") == "N":
+        break
+f = open("bill.txt", "a")
+print("Your bill is: ", bill, file=f)
+print(choice_Name, file=f)
+print(choice_Size, file=f)
+print(choice_quant, file=f)
+f.close()
