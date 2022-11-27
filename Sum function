@@ -1,0 +1,14 @@
+def Sum(x):
+    for i in x:
+        values = x.values()
+    total = sum(values)
+    
+    if total%2 == 0:
+        print("Sum is even")
+    else:
+        print("Sum is odd")
+    print(x)
+    return total
+
+Sum({"a":1, "b":2, "c": 3})
+
