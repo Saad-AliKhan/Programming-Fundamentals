@@ -1,0 +1,7 @@
+def op(x = 1, y = 1):
+    Addition = x + y
+    Subtraction = x - y
+    Division = x / y
+    Multiplication = x*y
+    return Addition , Subtraction, Division, Multiplication
+op()
